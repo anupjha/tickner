@@ -1,0 +1,21 @@
+/* Notification bell and panel */
+.bell{position:relative}
+.bell-count{position:absolute;top:-7px;right:-7px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;box-sizing:border-box;background:var(--primary);color:var(--primary-foreground);font-size:.68rem;font-weight:700;line-height:16px;text-align:center;border:2px solid var(--background)}
+.notif-list{display:grid;gap:10px;max-height:46vh;overflow:auto;margin-bottom:12px}
+.notif-item{border:1px solid var(--border);border-radius:var(--radius);padding:12px;background:var(--background)}
+.notif-item.unread{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 6%,var(--card))}
+.notif-head{display:flex;gap:10px;align-items:flex-start}
+.notif-icon{flex:none;width:32px;height:32px;border-radius:8px;display:grid;place-items:center;background:color-mix(in srgb,var(--primary) 14%,var(--card));color:var(--primary)}
+.notif-main{flex:1;min-width:0}
+.notif-title{font-weight:600;font-size:.92rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.notif-new{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--primary-foreground);background:var(--primary);border-radius:999px;padding:1px 8px}
+.notif-sub{font-size:.78rem;color:var(--muted-foreground)}
+.notif-bullets{list-style:disc;margin:8px 0 0 42px;padding-left:18px;font-size:.85rem;display:grid;gap:4px}
+.notif-notes{margin:8px 0 0 42px;font-size:.82rem;color:var(--muted-foreground);white-space:pre-wrap;max-height:120px;overflow:auto;word-break:break-word}
+.notif-actions{display:flex;gap:8px;margin:10px 0 0 42px;flex-wrap:wrap}
+.notif-empty{text-align:center;color:var(--muted-foreground);padding:24px 8px;font-size:.9rem}
+.notif-settings{border-top:1px solid var(--border);padding-top:10px;font-size:.85rem}
+.notif-settings summary{cursor:pointer;font-weight:600;margin-bottom:8px}
+.pref{display:flex;gap:8px;align-items:flex-start;margin:6px 0;cursor:pointer}
+.pref input{accent-color:var(--primary);margin-top:3px}
+.pref-note{color:var(--muted-foreground);font-size:.8rem;margin:6px 0}

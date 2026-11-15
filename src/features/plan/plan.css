@@ -1,0 +1,21 @@
+/* Daily plan view */
+.plan-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.plan-head h2{font-size:1.4rem;font-weight:500;margin:0;letter-spacing:-.01em}
+.day-nav{display:flex;gap:6px}
+.plan-summary{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0 10px;color:var(--muted-foreground);font-size:.85rem}
+.timeline{padding:14px 0;margin-bottom:8px}
+.tl-inner{position:relative;margin:0 12px 0 64px}
+.hour{position:absolute;left:-64px;right:-12px;border-top:1px solid var(--border);cursor:copy}
+.hour:hover{background:color-mix(in srgb,var(--primary) 6%,transparent)}
+.hour span{position:absolute;left:8px;top:-9px;width:48px;text-align:right;font-size:.72rem;color:var(--muted-foreground);background:var(--card);padding-right:4px}
+.block{position:absolute;z-index:2;display:flex;gap:8px;align-items:flex-start;padding:6px 6px 6px 8px;border-radius:8px;overflow:hidden;cursor:pointer;border:1px solid color-mix(in srgb,var(--primary) 45%,transparent);border-left:3px solid var(--primary);background:color-mix(in srgb,var(--primary) 15%,var(--card));font-size:.82rem}
+.block:hover{background:color-mix(in srgb,var(--primary) 24%,var(--card))}
+.block.done{opacity:.55}
+.block.done .bt{text-decoration:line-through}
+.block .bx{flex:1;min-width:0}
+.block .cb{margin-top:1px}
+.block .btn.sm{width:22px;height:22px;margin:-3px -2px 0 0}
+.bt{font-weight:600;line-height:1.25;overflow:hidden;text-overflow:ellipsis}
+.bm{font-size:.72rem;color:var(--muted-foreground)}
+.now-line{position:absolute;left:-12px;right:-12px;height:2px;background:var(--destructive);z-index:3;pointer-events:none}
+.now-line::before{content:"";position:absolute;left:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--destructive)}

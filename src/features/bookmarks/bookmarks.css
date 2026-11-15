@@ -1,0 +1,10 @@
+/* Bookmarks view */
+.mark-tools{display:flex;gap:8px;margin:16px 0 12px}
+.mark-tools .input{flex:1}
+.mark-tools .btn[aria-pressed=true]{background:var(--accent);border-color:var(--primary);color:var(--primary)}
+.mark{display:flex;gap:12px;align-items:flex-start;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius)}
+.mark:hover{border-color:var(--input)}
+.mb{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.mark a.mt{color:var(--foreground);font-weight:500;text-decoration:none;word-break:break-word}
+.mark a.mt:hover{color:var(--primary);text-decoration:underline}
+.mu{font-size:.78rem;color:var(--muted-foreground);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}

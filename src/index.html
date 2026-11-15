@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--@csp-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>@appName</title>
+<!--@styles-->
+</head>
+<body>
+<div class="titlebar" aria-hidden="true"></div>
+<main>
+  <header>
+    <div class="brand">
+      <img class="logo" alt="" width="36" height="36" src="@logo">
+      <div>
+        <h1 class="serif">@appName</h1>
+        <p class="sub" id="clock"></p>
+      </div>
+    </div>
+    <div class="hdr-actions" id="hdrActions"></div>
+  </header>
+  <div class="tabs-list main-tabs" id="views" role="tablist"></div>
+  <div id="viewRoot"></div>
+</main>
+<!--@script-->
+</body>
+</html>

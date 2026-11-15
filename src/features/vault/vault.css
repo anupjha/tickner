@@ -1,0 +1,27 @@
+/* Vault view */
+.vault-wrap{max-width:460px;margin:24px auto 0}
+.vault-wrap h2{font-size:1.4rem;font-weight:500;margin:0 0 6px}
+.vault-wrap>p{color:var(--muted-foreground);font-size:.9rem;margin:0 0 16px}
+.vlock-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--primary) 14%,var(--card));color:var(--primary);margin-bottom:12px}
+.vf{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;font-size:.82rem;font-weight:500}
+.vf .input{font-weight:400}
+.vf textarea.input{height:auto;min-height:70px;padding:8px 12px;resize:vertical;font-family:inherit}
+.pw-row{display:flex;gap:6px}
+.meter{height:4px;border-radius:2px;background:var(--muted);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;width:0;background:var(--destructive);transition:width .2s,background .2s}
+.v-err{color:var(--destructive);font-size:.85rem;margin:0 0 10px;min-height:1.2em}
+.v-tools{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.v-tools .input{flex:1 1 180px}
+.vcard{padding:14px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:6px}
+.vhead{display:flex;align-items:center;gap:10px}
+.vhead .vt{flex:1;min-width:0;font-weight:600;word-break:break-word}
+.vrow{display:flex;align-items:center;gap:6px;font-size:.88rem;min-height:30px}
+.vrow .vl{flex:none;width:78px;color:var(--muted-foreground);font-size:.78rem}
+.vrow .vv{flex:1;min-width:0;word-break:break-all}
+.vrow .vv.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem}
+.vrow a.vv{color:var(--primary);text-decoration:none}
+.vnotes{font-size:.82rem;color:var(--muted-foreground);white-space:pre-wrap;word-break:break-word;padding-top:2px}
+.gen-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.8rem;color:var(--muted-foreground);margin:-4px 0 12px}
+.gen-row input[type=number]{width:64px;height:30px}
+.gen-row label{display:inline-flex;gap:4px;align-items:center}
+.gen-row input[type=checkbox]{accent-color:var(--primary)}

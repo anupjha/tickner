@@ -1,0 +1,75 @@
+{
+  "name": "tickner",
+  "productName": "Tickner",
+  "version": "1.1.0",
+  "description": "Tickner: tasks, daily plan, bookmarks, scratch pad and an encrypted vault in one small app (desktop + web).",
+  "main": "electron/main.js",
+  "author": "You",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:web": "node scripts/build.mjs --web",
+    "watch": "node scripts/build.mjs --watch",
+    "start": "npm run build && electron .",
+    "test": "node --test \"test/*.test.mjs\"",
+    "dist": "npm run build && electron-builder --mac",
+    "dist:universal": "npm run build && electron-builder --mac --universal",
+    "dist:win": "npm run build && electron-builder --win",
+    "test:e2e": "node test/e2e/run.mjs"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.0.0",
+    "esbuild": "^0.25.0"
+  },
+  "build": {
+    "appId": "com.example.tickner",
+    "productName": "Tickner",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "out/renderer/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "build/icon.icns",
+      "identity": null
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    }
+  },
+  "tickner": {
+    "updateFeed": ""
+  }
+}
